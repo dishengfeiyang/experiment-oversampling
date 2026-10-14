@@ -1,0 +1,31 @@
+data:
+  n: 20000
+  k_n: 100
+  d: 10
+  mu: [1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+experiment:
+  test_size: 1000
+  val_size: 500
+  fidelity_ratio: 0.1
+  n_repeats: 50
+  seed_base: 42
+
+allocation:
+  c_n: null
+  alpha: 0.05
+  M: 13
+  B: 1.0
+
+synthesizer:
+  D: 3.0
+
+classifier:
+  C: 100.0
+  max_iter: 10000
+  class_weight: {0: 1.0, 1: 10.0}
+
+exp6:
+  m_grid: [0, 50, 100, 200, 500, 1000, 2000]
+  beta: 0.8
+  epsilon: 0.0

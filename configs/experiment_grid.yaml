@@ -1,0 +1,36 @@
+beta_grid: [0.8]
+epsilon_grid: [0.0, 0.05]
+
+m_max_mode: n
+m_max_factor: 0.05      # m = 0.05 n = 5000，固定不随 k_n 缩放
+
+methods:
+  - name: real_only
+    type: real_only
+
+  - name: theoretical_optimal
+    type: theoretical_optimal
+
+  - name: theoretical_optimal_forced_m
+    type: theoretical_optimal
+    params: {force_m_max: true}
+
+  - name: fixed_s_0.1_forced_m
+    type: fixed_s_optimal_m
+    params: {s_ratio: 0.1, force_m_max: true}
+
+  - name: fixed_s_0.3_forced_m
+    type: fixed_s_optimal_m
+    params: {s_ratio: 0.3, force_m_max: true}
+
+  - name: fixed_s_0.5_forced_m
+    type: fixed_s_optimal_m
+    params: {s_ratio: 0.5, force_m_max: true}
+
+  - name: fixed_s_0.7_forced_m
+    type: fixed_s_optimal_m
+    params: {s_ratio: 0.7, force_m_max: true}
+
+  - name: fixed_s_0.9_forced_m
+    type: fixed_s_optimal_m
+    params: {s_ratio: 0.9, force_m_max: true}
