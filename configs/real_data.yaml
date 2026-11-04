@@ -1,0 +1,25 @@
+dataset_name: mammography
+
+experiment:
+  test_size: 0.2
+  fidelity_ratio: 0.25
+  eval_ratio: 0.25
+  n_repeats: 20
+  seed_base: 42
+  m_max_factor: 1.0        # 合成样本固定为 1 倍的 k_n，确保所有方法预算相同
+  minority_subsample: null # 使用完整少数类 (约 260 个)
+
+estimation:
+  s_ratios: [0.2, 0.4, 0.6, 0.8, 1.0]
+  n_syn_per_s: 500
+
+generator:
+  n_components: 1
+
+classifier:
+  C: 1.0
+  max_iter: 2000
+  class_weight: null
+
+output:
+  results_dir: results/real_data
